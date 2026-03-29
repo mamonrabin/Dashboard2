@@ -4,8 +4,8 @@ import React from 'react';
 const page = () => {
     return (
         <div>
-            <PageHead title="Product List" />
-            <h2>Product List</h2>
+            <PageHead title="Subcategory List" />
+            <h2>Subcategory List</h2>
         </div>
     );
 };

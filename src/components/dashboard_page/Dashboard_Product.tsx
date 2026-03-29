@@ -2,6 +2,7 @@ import React from "react";
 import MostSellingProducts from "./Most_Selling_Products";
 import TopRatedProduct from "./Top_Rated_Product";
 import LessSellingProducts from "./Less_Selling_Products";
+import RecentOrder from "./RecentOrder";
 
 const DashboardProduct = () => {
   return (
@@ -12,7 +13,7 @@ const DashboardProduct = () => {
       </div>
       <div className="grid lg:grid-cols-2 gap-4 mt-4">
         <LessSellingProducts/>
-        <TopRatedProduct />
+        <RecentOrder />
       </div>
     </div>
   );

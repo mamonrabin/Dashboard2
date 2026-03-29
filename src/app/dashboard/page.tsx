@@ -6,7 +6,6 @@ const page = () => {
   return (
     <div className="">
       <PageHead title="Dashboard" />
-
       <Dashboard />
     </div>
   );

@@ -1,6 +1,6 @@
 import shirt from "@/src/assets/product/product.jpg";
 
-export const productList = [
+export const orderList = [
   {
     id: 1,
     title: "PRODUCT NAME HERE",
