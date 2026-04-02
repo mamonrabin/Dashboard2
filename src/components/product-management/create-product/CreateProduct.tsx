@@ -6,7 +6,14 @@ import { useForm, Controller } from "react-hook-form";
 import { Upload } from "lucide-react";
 
 import Image from "next/image";
-
+import TiptapEditor from "./TiptapEditor";
+import { DiscountType } from "./DiscountType";
+import { ShippingFee } from "./ShippingFee";
+import { ProductCategorySelector } from "./ProductCategorySelector";
+import { ProductSubCategorySelector } from "./ProductSubCategorySelector";
+import { ProductBrabdSelector } from "./ProductBrabdSelector";
+import { LabelSelector } from "./LabelSelector";
+import { CreateInventeryType } from "./CreateInventeryType";
 
 export default function CreateProduct() {
   const {
@@ -23,10 +30,8 @@ export default function CreateProduct() {
   const [backPreview, setBackPreview] = useState<string | null>(null);
   const [extraPreviews, setExtraPreviews] = useState<string[]>([]);
 
-  
-
-  const onSubmit = (data:any) => {
-        console.log("Form Data:", data);
+  const onSubmit = (data: any) => {
+    console.log("Form Data:", data);
   };
 
   return (
@@ -47,7 +52,6 @@ export default function CreateProduct() {
             className="px-3 py-2 border rounded"
             placeholder="Enter product name"
           />
-          
         </div>
         {/* Product short description  */}
         <div className="flex flex-col gap-2">
@@ -61,7 +65,6 @@ export default function CreateProduct() {
             className="px-3 py-2 border rounded"
             placeholder="Enter product short details"
           />
-          
         </div>
 
         {/* Description */}
@@ -69,15 +72,7 @@ export default function CreateProduct() {
           <label className="text-sm font-medium">
             Product Description <span className="text-red-600">*</span>
           </label>
-          {/* <Controller
-            name="description"
-            control={control}
-            rules={{ required: "Description required" }}
-            render={({ field }) => (
-              <TiptapEditor value={field.value} onChange={field.onChange} />
-            )}
-          /> */}
-          
+          <TiptapEditor />
         </div>
 
         {/* Product Images */}
@@ -111,7 +106,6 @@ export default function CreateProduct() {
               id="frontImage"
               accept="image/*"
               className="hidden"
-              
             />
           </div>
 
@@ -142,7 +136,6 @@ export default function CreateProduct() {
               id="backImage"
               accept="image/*"
               className="hidden"
-              
             />
           </div>
 
@@ -179,91 +172,52 @@ export default function CreateProduct() {
               accept="image/*"
               multiple
               className="hidden"
-              
             />
           </div>
         </div>
 
         {/* MRP, Discount, Shipping */}
         <div className="flex gap-4">
-          <input
-            {...register("mrp", { required: "MRP required" })}
-            placeholder="MRP"
-            className="border px-3 py-2 rounded"
-          />
-          {/* <Controller
-            name="discountType"
-            control={control}
-            render={({ field }) => (
-              <DiscountType value={field.value} onChange={field.onChange} />
-            )}
-          /> */}
-          <input
+          <div className="flex flex-col gap-1">
+            <label className="text-sm">MRP Price</label>
+            <input
+              {...register("mrp", { required: "MRP required" })}
+              placeholder="MRP"
+              className="border px-3 py-2 rounded"
+            />
+          </div>
+          <DiscountType />
+          <div className="flex flex-col gap-1">
+            <label className="text-sm">Discount</label>
+            <input
             {...register("discount")}
             placeholder="Discount"
             className="border px-3 py-2 rounded"
           />
-          {/* <Controller
-            name="shipping"
-            control={control}
-            render={({ field }) => (
-              <ShippingFee value={field.value} onChange={field.onChange} />
-            )}
-          /> */}
+          </div>
+          <ShippingFee />
         </div>
 
         {/* Category, SubCategory, Brand */}
         <div className="flex gap-4">
-          {/* <Controller
-            name="category"
-            control={control}
-            render={({ field }) => (
-              <CCategorySelector
-                value={field.value}
-                onChange={field.onChange}
-              />
-            )}
-          /> */}
-          {/* <Controller
-            name="subCategory"
-            control={control}
-            render={({ field }) => (
-              <SCCategorySelector
-                value={field.value}
-                onChange={field.onChange}
-              />
-            )}
-          />
-          <Controller
-            name="brand"
-            control={control}
-            render={({ field }) => (
-              <BrandSelector value={field.value} onChange={field.onChange} />
-            )}
-          /> */}
+          <ProductCategorySelector/>
+          <ProductSubCategorySelector/>
+          <ProductBrabdSelector/>
+          
         </div>
 
         <div>
-          {/* <Controller
-            name="labels"
-            control={control}
-            render={({ field }) => (
-              <LabelSelector value={field.value} onChange={field.onChange} />
-            )}
-          /> */}
+          <LabelSelector/>
         </div>
 
         {/* Inventory Type */}
-        {/* <CreateInventeryType
+        <CreateInventeryType
           control={control}
           register={register}
           watch={watch}
-        /> */}
+        />
 
-        <button
-         
-          className="px-6 py-3 bg-[#2B748A] text-white rounded mt-4"
-        >
+        <button className="px-6 py-3 bg-[#2B748A] text-white rounded mt-4">
           Create Product
         </button>
       </form>
