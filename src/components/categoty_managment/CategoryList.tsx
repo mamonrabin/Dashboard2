@@ -8,7 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-// import { categorysList } from "@/src/api/categoriesApi";
+
 import Image from "next/image";
 
 import CommonPagination from "../common_use/Common_Pagination";

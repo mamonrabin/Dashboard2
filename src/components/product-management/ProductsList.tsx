@@ -1,4 +1,3 @@
-
 "use client";
 import shirt from "@/src/assets/product/product.jpg";
 import {
@@ -11,6 +10,7 @@ import {
 } from "@/components/ui/table";
 import CommonPagination from "../common_use/Common_Pagination";
 import Image from "next/image";
+import ProductUpdate from "./ProductUpdate";
 
 const ProductsList = () => {
   return (
@@ -39,90 +39,292 @@ const ProductsList = () => {
 
         <TableBody>
           <TableRow>
-              <TableCell className="text-center">1</TableCell>
-              <TableCell className="text-center">
-                <Image
-                  src={shirt}
-                  alt="front"
-                  width={60}
-                  height={60}
-                />
-              </TableCell>
-              <TableCell className="text-center">
-                <Image
-                  src={shirt}
-                  alt="backview"
-                  width={60}
-                  height={60}
-                />
-              </TableCell>
+            <TableCell className="text-center">1</TableCell>
+            <TableCell className="text-center">
+              <Image src={shirt} alt="front" width={60} height={60} />
+            </TableCell>
+            <TableCell className="text-center">
+              <Image src={shirt} alt="backview" width={60} height={60} />
+            </TableCell>
 
-              <TableCell className="text-center">product-01</TableCell>
-              <TableCell className="text-center">
-                Flat
-              </TableCell>
-              <TableCell className="text-center">
-                ৳ 50
-              </TableCell>
-              <TableCell className="text-center">
-                ৳ 500
-              </TableCell>
-              <TableCell className="text-center">
-                ৳ 450
-              </TableCell>
-              <TableCell className="text-center">
-                colorSize
-              </TableCell>
-              <TableCell className="text-sm p-1 grid grid-cols-2 gap-1 w-105">
-               
-                  <div className="border p-2 bg-gray-200">
-                    <div>
-                      <p>Size : xl</p>
-                      <p>Color : red</p>
-                      <p className="">Quantity 18</p>
-                    </div>
+            <TableCell className="text-center">product-01</TableCell>
+            <TableCell className="text-center">Flat</TableCell>
+            <TableCell className="text-center">৳ 50</TableCell>
+            <TableCell className="text-center">৳ 500</TableCell>
+            <TableCell className="text-center">৳ 450</TableCell>
+            <TableCell className="text-center">colorSize</TableCell>
+            <TableCell className="text-sm p-1 grid grid-cols-2 gap-1 w-105">
+              <div className="border p-2 bg-gray-200">
+                <div>
+                  <p>Size : xl</p>
+                  <p>Color : red</p>
+                  <p className="">Quantity 18</p>
+                </div>
 
-                    <div>
-                      <p className=" text-[#6967E7]">
-                        Sold Quantity 08
-                      </p>
-                      <p className=" text-orange-500">
-                        Hold Quantity 10
-                      </p>
-                    </div>
-                  </div>
-              
-              </TableCell>
+                <div>
+                  <p className=" text-[#6967E7]">Sold Quantity 08</p>
+                  <p className=" text-orange-500">Hold Quantity 10</p>
+                </div>
+              </div>
+            </TableCell>
 
-              <TableCell className="text-center">12</TableCell>
+            <TableCell className="text-center">12</TableCell>
 
-              <TableCell className="text-center">
-                category-01
-              </TableCell>
-              <TableCell className="text-center">
-                subCategory-01
-              </TableCell>
-              <TableCell className="text-center">
-                brand-1
-              </TableCell>
+            <TableCell className="text-center">category-01</TableCell>
+            <TableCell className="text-center">subCategory-01</TableCell>
+            <TableCell className="text-center">brand-1</TableCell>
 
-              <TableCell>
-                <button
+            <TableCell>
+              <button
                 //   onClick={() => handleDelete(Product._id)}
-                  className="bg-red-500 hover:bg-red-700 duration-300 cursor-pointer text-white px-4 py-2 rounded text-sm"
-                >
-                  Delete
-                </button>
-              </TableCell>
-              <TableCell>
-                {/* <ProductUpdate /> */}
-              </TableCell>
-            </TableRow>
+                className="bg-red-500 hover:bg-red-700 duration-300 cursor-pointer text-white px-4 py-2 rounded text-sm"
+              >
+                Delete
+              </button>
+            </TableCell>
+            <TableCell>
+              <ProductUpdate />
+            </TableCell>
+          </TableRow>
+
+          <TableRow>
+            <TableCell className="text-center">2</TableCell>
+            <TableCell className="text-center">
+              <Image src={shirt} alt="front" width={60} height={60} />
+            </TableCell>
+            <TableCell className="text-center">
+              <Image src={shirt} alt="backview" width={60} height={60} />
+            </TableCell>
+
+            <TableCell className="text-center">product-02</TableCell>
+            <TableCell className="text-center">Flat</TableCell>
+            <TableCell className="text-center">৳ 60</TableCell>
+            <TableCell className="text-center">৳ 600</TableCell>
+            <TableCell className="text-center">৳ 540</TableCell>
+            <TableCell className="text-center">color</TableCell>
+            <TableCell className="text-sm p-1 grid grid-cols-2 gap-1 w-105">
+              <div className="border p-2 bg-gray-200">
+                <div>
+                  <p>Size : N/A</p>
+                  <p>Color : Yellow</p>
+                  <p className="">Quantity 28</p>
+                </div>
+
+                <div>
+                  <p className=" text-[#6967E7]">Sold Quantity 10</p>
+                  <p className=" text-orange-500">Hold Quantity 18</p>
+                </div>
+              </div>
+              <div className="border p-2 bg-gray-200">
+                <div>
+                  <p>Size : N/A</p>
+                  <p>Color : Yellow</p>
+                  <p className="">Quantity 28</p>
+                </div>
+
+                <div>
+                  <p className=" text-[#6967E7]">Sold Quantity 10</p>
+                  <p className=" text-orange-500">Hold Quantity 18</p>
+                </div>
+              </div>
+            </TableCell>
+
+            <TableCell className="text-center">28</TableCell>
+
+            <TableCell className="text-center">category-02</TableCell>
+            <TableCell className="text-center">subCategory-02</TableCell>
+            <TableCell className="text-center">brand-2</TableCell>
+
+            <TableCell>
+              <button
+                //   onClick={() => handleDelete(Product._id)}
+                className="bg-red-500 hover:bg-red-700 duration-300 cursor-pointer text-white px-4 py-2 rounded text-sm"
+              >
+                Delete
+              </button>
+            </TableCell>
+            <TableCell>
+              <ProductUpdate />
+            </TableCell>
+          </TableRow>
+
+          <TableRow>
+            <TableCell className="text-center">3</TableCell>
+            <TableCell className="text-center">
+              <Image src={shirt} alt="front" width={60} height={60} />
+            </TableCell>
+            <TableCell className="text-center">
+              <Image src={shirt} alt="backview" width={60} height={60} />
+            </TableCell>
+
+            <TableCell className="text-center">product-03</TableCell>
+            <TableCell className="text-center">Flat</TableCell>
+            <TableCell className="text-center">৳ 60</TableCell>
+            <TableCell className="text-center">৳ 600</TableCell>
+            <TableCell className="text-center">৳ 540</TableCell>
+            <TableCell className="text-center">color</TableCell>
+            <TableCell className="text-sm p-1 grid grid-cols-2 gap-1 w-105">
+              <div className="border p-2 bg-gray-200">
+                <div>
+                  <p>Size : N/A</p>
+                  <p>Color : Yellow</p>
+                  <p className="">Quantity 28</p>
+                </div>
+
+                <div>
+                  <p className=" text-[#6967E7]">Sold Quantity 10</p>
+                  <p className=" text-orange-500">Hold Quantity 18</p>
+                </div>
+              </div>
+              <div className="border p-2 bg-gray-200">
+                <div>
+                  <p>Size : N/A</p>
+                  <p>Color : Yellow</p>
+                  <p className="">Quantity 28</p>
+                </div>
+
+                <div>
+                  <p className=" text-[#6967E7]">Sold Quantity 10</p>
+                  <p className=" text-orange-500">Hold Quantity 18</p>
+                </div>
+              </div>
+              <div className="border p-2 bg-gray-200">
+                <div>
+                  <p>Size : N/A</p>
+                  <p>Color : Yellow</p>
+                  <p className="">Quantity 28</p>
+                </div>
+
+                <div>
+                  <p className=" text-[#6967E7]">Sold Quantity 10</p>
+                  <p className=" text-orange-500">Hold Quantity 18</p>
+                </div>
+              </div>
+
+              
+            </TableCell>
+
+            <TableCell className="text-center">28</TableCell>
+
+            <TableCell className="text-center">category-02</TableCell>
+            <TableCell className="text-center">subCategory-02</TableCell>
+            <TableCell className="text-center">brand-2</TableCell>
+
+            <TableCell>
+              <button
+                //   onClick={() => handleDelete(Product._id)}
+                className="bg-red-500 hover:bg-red-700 duration-300 cursor-pointer text-white px-4 py-2 rounded text-sm"
+              >
+                Delete
+              </button>
+            </TableCell>
+            <TableCell>
+              <ProductUpdate />
+            </TableCell>
+          </TableRow>
+
+          <TableRow>
+            <TableCell className="text-center">4</TableCell>
+            <TableCell className="text-center">
+              <Image src={shirt} alt="front" width={60} height={60} />
+            </TableCell>
+            <TableCell className="text-center">
+              <Image src={shirt} alt="backview" width={60} height={60} />
+            </TableCell>
+
+            <TableCell className="text-center">product-04</TableCell>
+            <TableCell className="text-center">Flat</TableCell>
+            <TableCell className="text-center">৳ 50</TableCell>
+            <TableCell className="text-center">৳ 500</TableCell>
+            <TableCell className="text-center">৳ 450</TableCell>
+            <TableCell className="text-center">colorSize</TableCell>
+            <TableCell className="text-sm p-1 grid grid-cols-2 gap-1 w-105">
+              <div className="border p-2 bg-gray-200">
+                <div>
+                  <p>Size : xl</p>
+                  <p>Color : red</p>
+                  <p className="">Quantity 18</p>
+                </div>
+
+                <div>
+                  <p className=" text-[#6967E7]">Sold Quantity 08</p>
+                  <p className=" text-orange-500">Hold Quantity 10</p>
+                </div>
+              </div>
+            </TableCell>
+
+            <TableCell className="text-center">12</TableCell>
+
+            <TableCell className="text-center">category-01</TableCell>
+            <TableCell className="text-center">subCategory-01</TableCell>
+            <TableCell className="text-center">brand-1</TableCell>
+
+            <TableCell>
+              <button
+                //   onClick={() => handleDelete(Product._id)}
+                className="bg-red-500 hover:bg-red-700 duration-300 cursor-pointer text-white px-4 py-2 rounded text-sm"
+              >
+                Delete
+              </button>
+            </TableCell>
+            <TableCell>
+              <ProductUpdate />
+            </TableCell>
+          </TableRow>
+
+          <TableRow>
+            <TableCell className="text-center">5</TableCell>
+            <TableCell className="text-center">
+              <Image src={shirt} alt="front" width={60} height={60} />
+            </TableCell>
+            <TableCell className="text-center">
+              <Image src={shirt} alt="backview" width={60} height={60} />
+            </TableCell>
+
+            <TableCell className="text-center">product-05</TableCell>
+            <TableCell className="text-center">Flat</TableCell>
+            <TableCell className="text-center">৳ 50</TableCell>
+            <TableCell className="text-center">৳ 500</TableCell>
+            <TableCell className="text-center">৳ 450</TableCell>
+            <TableCell className="text-center">colorSize</TableCell>
+            <TableCell className="text-sm p-1 grid grid-cols-2 gap-1 w-105">
+              <div className="border p-2 bg-gray-200">
+                <div>
+                  <p>Size : xl</p>
+                  <p>Color : red</p>
+                  <p className="">Quantity 18</p>
+                </div>
+
+                <div>
+                  <p className=" text-[#6967E7]">Sold Quantity 08</p>
+                  <p className=" text-orange-500">Hold Quantity 10</p>
+                </div>
+              </div>
+            </TableCell>
+
+            <TableCell className="text-center">12</TableCell>
+
+            <TableCell className="text-center">category-01</TableCell>
+            <TableCell className="text-center">subCategory-01</TableCell>
+            <TableCell className="text-center">brand-1</TableCell>
+
+            <TableCell>
+              <button
+                //   onClick={() => handleDelete(Product._id)}
+                className="bg-red-500 hover:bg-red-700 duration-300 cursor-pointer text-white px-4 py-2 rounded text-sm"
+              >
+                Delete
+              </button>
+            </TableCell>
+            <TableCell>
+              <ProductUpdate />
+            </TableCell>
+          </TableRow>
         </TableBody>
       </Table>
 
       <div className="py-4 ">
-        <CommonPagination/>
+        <CommonPagination />
       </div>
     </div>
   );

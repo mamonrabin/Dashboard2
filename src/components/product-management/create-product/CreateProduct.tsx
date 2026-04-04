@@ -217,7 +217,7 @@ export default function CreateProduct() {
           watch={watch}
         />
 
-        <button className="px-6 py-3 bg-[#2B748A] text-white rounded mt-4">
+        <button className="px-6 py-3 bg-[#6767E7] hover:bg-[#8757E9] duration-300 cursor-pointer text-white rounded mt-4">
           Create Product
         </button>
       </form>
