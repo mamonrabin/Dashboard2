@@ -1,12 +1,10 @@
 import PageHead from '@/src/components/Admin-panal/PageHead';
-import Review from '@/src/components/review_managment/Review';
 import React from 'react';
 
 const page = () => {
     return (
         <div>
-            <PageHead title="Product Review List" />
-            <Review/>
+            <PageHead title="Settings" />
         </div>
     );
 };

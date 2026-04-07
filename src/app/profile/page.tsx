@@ -1,12 +1,12 @@
 import PageHead from '@/src/components/Admin-panal/PageHead';
-import Review from '@/src/components/review_managment/Review';
+import Profile from '@/src/components/profile_managment/Profile';
 import React from 'react';
 
 const page = () => {
     return (
         <div>
-            <PageHead title="Product Review List" />
-            <Review/>
+            <PageHead title="Profile" />
+            <Profile/>
         </div>
     );
 };
