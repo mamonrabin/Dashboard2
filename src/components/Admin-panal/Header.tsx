@@ -1,6 +1,5 @@
 import { useSidebar } from "@/src/context/Sidebar_Context";
 import {
-  Bell,
   LogOut,
   Search,
   Settings,
@@ -10,12 +9,10 @@ import {
 import {
   Popover,
   PopoverContent,
-  PopoverDescription,
-  PopoverHeader,
-  PopoverTitle,
   PopoverTrigger,
 } from "@/components/ui/popover";
 import Link from "next/link";
+import Notifacation from "./Notifacation";
 
 const Header = () => {
   const { toggleSidebar } = useSidebar();
@@ -45,12 +42,7 @@ const Header = () => {
           </div>
 
           <div className="flex items-end justify-center gap-4">
-            <div className="w-8 h-8 rounded  flex items-center justify-center relative">
-              <p>
-                <Bell size={20} />
-              </p>
-              <p className="w-2.5 h-2.5 rounded-full bg-[#49B6F5] absolute top-1 right-1.5"></p>
-            </div>
+            <Notifacation/>
             <div>
               <Popover>
                 <PopoverTrigger asChild>
