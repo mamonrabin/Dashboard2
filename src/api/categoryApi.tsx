@@ -7,7 +7,7 @@ export const categoryList = [
   },
   {
     _id: "2",
-    title: "Electronics2",
+    title: "Electronics02",
     slug: "electronics",
     image: "electronics.jpg",
   },
