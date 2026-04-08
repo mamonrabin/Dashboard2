@@ -18,7 +18,7 @@ const Login = () => {
           </label>
           <input
             type="text"
-            placeholder="user name"
+            placeholder="almamon757@gmail.com"
             className="w-full px-4 py-3 border rounded-lg outline-none"
           />
         </div>
@@ -35,7 +35,7 @@ const Login = () => {
           <div className="flex">
             <input
               type={showPassword ? "text" : "password"}
-              placeholder="password"
+              placeholder="123456789"
               className="w-full px-4 py-3 border rounded-l-lg outline-none"
             />
             <button
